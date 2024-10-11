@@ -147,6 +147,7 @@ impl App {
     }
 
     fn under_threshold(&self) -> bool {
+        return true;
         match self.config.reset_threshold() {
             Some(reset_threshold) => self.terminal.portion_covered() < reset_threshold,
             None => true,
